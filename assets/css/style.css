@@ -67,7 +67,7 @@ header {
   margin: 0;
 }
 
-.intro-details a {
+.intro-details > a {
   color: var(--accent);
   text-decoration: none;
   display: block; /* Ensures the email stays on its own line */
