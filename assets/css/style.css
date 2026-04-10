@@ -4,7 +4,7 @@
   --accent: #3EA6FF;
   --bg: #0F0F0F;
   --text: #AAAAAA;
-  --surface: #212121;
+  --surface: #17171C;
   --white: #ffffff;
 }
 
@@ -67,7 +67,7 @@ header {
 
 .card { 
   background: var(--surface);
-  border-radius: 8px;
+  border-radius: 25px;
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
@@ -85,7 +85,7 @@ header {
 }
 
 .card-content { 
-  padding: 15px;
+  padding: 25px;
 }
 
 .btn { 
@@ -94,16 +94,17 @@ header {
   color: var(--white);
   padding: 10px 20px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 25px;
   font-weight: bold;
 }
 
 /* Contact Form */
 .contact-section { 
   background: var(--surface);
-  padding: 40px;
-  border-radius: 8px;
-  margin-top: 40px;
+  padding: 25px;
+  border-radius: 50px;
+  margin-top: 25px;
+  text-align: center;
 }
 
 .contact-section h2 {
@@ -133,26 +134,50 @@ textarea {
   border-radius: 25px;
 }
 
+/* Styles for input fields with icons */
+.form-field-with-icon {
+  position: relative;
+  margin: 10px 0; /* Apply margin to the wrapper instead of the input */
+}
+
+.form-field-with-icon .icon {
+  position: absolute;
+  left: 15px; /* Position the icon from the left edge */
+  top: 50%; /* Vertically center the icon */
+  transform: translateY(-50%); /* Adjust for exact vertical centering */
+  color: var(--text); /* Use the defined text color for icons */
+  font-size: 16px; /* Adjust icon size as needed */
+  pointer-events: none; /* Allows clicks to pass through to the input */
+}
+
+/* Adjust input padding and remove its margin when inside a wrapper with an icon */
+.form-field-with-icon input {
+  padding-left: 45px; /* Increase left padding to make space for the icon */
+  margin: 0; /* Remove the default margin from the input itself */
+}
+
+
 button { 
   background: var(--primary);
   color: var(--white);
   padding: 12px 24px;
   border: none;
-  border-radius: 4px;
+  border-radius: 25px;
   cursor: pointer;
-  font-size: 16px;
-  width: 100%;
+  font-size: 14px;
+  width: 25%;
+  display: block;
+  margin: 7px auto 0;
   transition: opacity 0.3s;
 }
 
 button:hover { 
-  opacity: 0.9;
+  opacity: 0.75;
 }
 
 /* Footer */
 footer { 
   text-align: center;
-  padding: 20px;
   font-size: 0.9em;
   color: #777;
 }
