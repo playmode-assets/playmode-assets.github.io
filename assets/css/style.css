@@ -13,6 +13,10 @@
   color: var(--accent);
 }
 
+.separator {
+  color: var(--text);
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* Layout */
@@ -22,6 +26,11 @@ body {
   color: var(--text);
   background: var(--bg);
   margin: 0;
+}
+
+strong {
+  color: var(--white);
+  font-weight: 700;
 }
 
 /* Global Link Styling */
@@ -36,12 +45,12 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #F1F1F1;
+  color: var(--white);
 }
 
 header { 
   color: var(--white);
-  padding: 60px 20px 10px; /* Kept 60px top, reduced bottom to 10px */
+  padding: 60px 20px 10px;
   text-align: center;
 }
 
@@ -63,16 +72,6 @@ header {
   margin-bottom: 20px;
 }
 
-.intro-details p {
-  margin: 0;
-}
-
-.intro-details > a {
-  color: var(--accent);
-  text-decoration: none;
-  display: block; /* Ensures the email stays on its own line */
-}
-
 .social-links {
   margin-top: 15px;
   display: flex;
@@ -81,7 +80,7 @@ header {
 }
 
 .social-links a {
-  font-size: 22px;
+  font-size: 32px;
   color: var(--text);
   transition: transform 0.2s ease, color 0.2s ease;
   display: inline-block;
@@ -111,6 +110,11 @@ header {
 
 .card:hover { 
   transform: translateY(-5px);
+}
+
+/* Allows a card to span the full width of the grid */
+.card.featured {
+  grid-column: 1 / -1;
 }
 
 .card img { 
@@ -172,8 +176,8 @@ input, textarea {
   border: none;
   box-sizing: border-box;
   font-size: 14px;
-  background: #0f0f0f;
-  color: #F1F1F1;
+  background: var(--bg);
+  color: var(--white);
 }
 
 input {
